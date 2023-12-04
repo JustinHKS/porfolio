@@ -28,5 +28,12 @@ jobs:
       - name: Deploy static site to S3 bucket
         run: aws s3 sync ./ s3://justinhui-personalwebsite --delete  
 
-      - name: Clear Cloudfront
-        run: aws cloudfront create-invalidation --distribution-id=E2LBCXK3KLEPQH
+      - name: AWS Cloudfront Invalidate Action
+        uses: awact/cloudfront-action@0.1.2
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ap-southeast-1
+          DISTRIBUTION_ID: E2LBCXK3KLEPQH
+
+          
