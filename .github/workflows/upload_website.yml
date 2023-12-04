@@ -29,4 +29,4 @@ jobs:
         run: aws s3 sync ./ s3://justinhui-personalwebsite --delete  
 
       - name: Clear Cloudfront
-        run: aws cloudfront create-invalidation --distribution-id=E2LBCXK3KLEPQH --paths /*
+        run: aws cloudfront create-invalidation --distribution-id=E2LBCXK3KLEPQH
