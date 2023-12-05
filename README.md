@@ -4,7 +4,7 @@
 :star: Star me on GitHub — it helps!
 
 ### Deploy Method
-I am simply using github action to push the codes into a s3 container which is used to host the static website.
+I am simply using github action to push the codes into a s3 bucket which is used to host the static website.
 
 
 ## License
